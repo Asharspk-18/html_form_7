@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        /* Basic styling to match the image's appearance */
+        body {
+            background-color: #f0f0f0; /* Light gray background */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: white; /* Optional: to mimic a form container on the page */
+            padding: 20px;
+            border: 1px solid #ccc; /* Optional: to give a subtle border */
+            width: 400px; /* Set a fixed width for the form area */
+        }
+
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        /* Styling for the table to ensure alignment and consistent input size */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 5px 0;
+        }
+
+        /* Styling for all text-based input fields and the textarea to ensure uniform size */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="tel"],
+        textarea {
+            width: 98%; /* 100% minus padding/border space */
+            padding: 5px;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            border: 1px solid #ccc;
+            /* Height will adjust automatically for single-line inputs */
+        }
+
+        /* Specific style for textarea to make it look like a multi-line box */
+        textarea {
+            resize: vertical; /* Allow vertical resizing, but not horizontal */
+            min-height: 80px; /* Make it clearly a larger area */
+        }
+
+        .gender-options label {
+            margin-right: 15px; /* Spacing between radio buttons */
+        }
+
+        .buttons {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .buttons input {
+            padding: 8px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2><u>Registration form</u></h2>
+        <form action="#" method="POST">
+            <table>
+                <tr>
+                    <td><label for="fname">First Name</label></td>
+                    <td><input type="text" id="fname" name="first_name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="lname">Last Name</label></td>
+                    <td><input type="text" id="lname" name="last_name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="nname">Nick Name</label></td>
+                    <td><input type="text" id="nname" name="nick_name"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">e-mail</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td><input type="password" id="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth</label></td>
+                    <td><input type="date" id="dob" name="date_of_birth"></td>
+                </tr>
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td class="gender-options">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+
+                        <input type="radio" id="others" name="gender" value="others">
+                        <label for="others">Others</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="mobile">Mobile</label></td>
+                    <td><input type="tel" id="mobile" name="mobile"></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address</label></td>
+                    <td>
+                        <textarea id="address" name="address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="buttons">
+                        <input type="submit" value="submit">
+                        <input type="reset" value="reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
